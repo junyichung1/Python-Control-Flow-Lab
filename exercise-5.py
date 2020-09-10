@@ -12,18 +12,19 @@
 #      etc.
 
 # Hint: The next number is found by adding the two numbers before 
-sequence = int(input('Enter what sequence you want to stop at:'))
+
+count = 0
 a = 0
 b = 1
-sum = 0
-count = 1
-print("Fibonacci Series: ")
-while count <= sequence:
-    print(sum)
+while count < 50:
+    if count < 2:
+        print(f'count: {count} / number: {count}')
+    else:    
+        sum = a + b
+        print(f'count: {count} / number: {sum}')
+        a = b
+        b = sum
     count += 1
-    a = b
-    b = sum
-    sum = a + b
 
 
 
